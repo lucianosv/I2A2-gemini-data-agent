@@ -1,0 +1,8 @@
+pandas
+streamlit
+plotly
+matplotlib
+seaborn
+pycountry
+google-generativeai
+tabulate
