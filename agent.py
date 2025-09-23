@@ -22,7 +22,8 @@ def classify_intent(user_prompt: str) -> str:
     Retorna exatamente 'analysis' ou 'chat'; em erro, retorna 'chat' como fallback seguro.
     """
     try:
-        model = genai.GenerativeModel("gemini-2.5-pro")
+#        model = genai.GenerativeModel("gemini-2.5-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash-lite")
         prompt = f"""
 Você é um classificador de intenções. Analise a pergunta e responda APENAS com:
 - analysis: se o usuário pedir para analisar, plotar, descrever, correlacionar ou consultar dados.
@@ -55,7 +56,8 @@ Responda com UMA palavra: analysis ou chat.
 # ---------------- Resposta de chat ----------------
 def get_chat_response(user_prompt: str) -> str:
     try:
-        model = genai.GenerativeModel("gemini-2.5-pro")
+        #model = genai.GenerativeModel("gemini-2.5-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash-lite")
         sys = """Você é o Gemini Data Agent. Responda de forma clara e amigável.
 Se a pergunta não exigir análise de dados, seja breve."""
         resp = model.generate_content([sys, user_prompt])
@@ -70,7 +72,8 @@ def get_analysis_code(user_prompt: str, sample_markdown: str) -> str:
     Deve imprimir alguma saída textual e, quando possível, um 'INSIGHT: ...' ao final.
     """
     try:
-        model = genai.GenerativeModel("gemini-2.5-pro")
+        #model = genai.GenerativeModel("gemini-2.5-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash-lite")
         prompt = f"""
 Você irá gerar APENAS código Python (sem explicações ou cercas ```
 
