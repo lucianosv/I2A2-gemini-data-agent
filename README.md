@@ -33,4 +33,4 @@ Um agente de IA para análise automática de dados CSV usando Google Gemini e St
 
 ## 🌐 Deploy
 
-Disponível em: [Streamlit Cloud]([https://seu-app.streamlit.app](https://lucianosv.streamlit.app/))
+Disponível em: [Streamlit Cloud](https://lucianosv.streamlit.app/)
